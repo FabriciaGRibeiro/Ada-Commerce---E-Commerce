@@ -1,0 +1,8 @@
+com\example\ECommerce\services\ECommerceService.class
+com\example\ECommerce\model\ItemPedido.class
+com\example\ECommerce\dataStore\Store.class
+com\example\ECommerce\ECommerceApplication.class
+com\example\ECommerce\App.class
+com\example\ECommerce\model\Pedido.class
+com\example\ECommerce\model\Produto.class
+com\example\ECommerce\model\Cliente.class
