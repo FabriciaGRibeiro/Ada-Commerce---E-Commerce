@@ -69,7 +69,7 @@ SRC
 3.  **Interaja com o menu:**
     Siga as opções apresentadas no terminal para gerenciar clientes, produtos e pedidos.
 
-## Testes
+## TesteS
 
 Para executar os testes unitários, utilize o seguinte comando:
 
@@ -94,4 +94,5 @@ Este projeto busca aplicar os seguintes princípios:
     -   **Polimorfismo:** (Pode ser explorada em futuras extensões).
     -   **Abstração:** Modelos de dados representam entidades do mundo real de forma simplificada.
  
-    -   Autor: Fabrícia Graziele Ribeiro
+      Autor: Fabrícia Graziele Ribeiro
+
