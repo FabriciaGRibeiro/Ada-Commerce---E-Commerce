@@ -56,8 +56,8 @@ SRC
 
 1.  **Clone o repositório:**
     ```bash
-    git clone <URL_DO_REPOSITORIO>
-    cd <NOME_DO_REPOSITORIO>
+    git clone <>
+    cd <Ada-Commerce---Comércio Eletrônico>
     ```
 
 2.  **Compile e execute o sistema (via linha de comando):**
@@ -95,4 +95,5 @@ Este projeto busca aplicar os seguintes princípios:
     -   **Abstração:** Modelos de dados representam entidades do mundo real de forma simplificada.
  
       Autor: Fabrícia Graziele Ribeiro
+
 
