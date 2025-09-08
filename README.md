@@ -56,7 +56,7 @@ SRC
 
 1.  **Clone o repositório:**
     ```bash
-    git clone <>
+    git clone <https://github.com/FabriciaGRibeiro/Ada-Commerce---E-Commerce>
     cd <Ada-Commerce---Comércio Eletrônico>
     ```
 
@@ -95,5 +95,6 @@ Este projeto busca aplicar os seguintes princípios:
     -   **Abstração:** Modelos de dados representam entidades do mundo real de forma simplificada.
  
       Autor: Fabrícia Graziele Ribeiro
+
 
 
