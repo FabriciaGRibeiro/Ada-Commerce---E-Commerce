@@ -2,281 +2,86 @@ Sistema E-Commerce para Ada Tech (Java)
 
 Este projeto implementa um sistema de E-Commerce básico para a Ada Tech, permitindo o gerenciamento de clientes, produtos e pedidos. O sistema foi desenvolvido em Java, seguindo os princípios de Orientação a Objetos e SOLID, com uma base de dados em memória para simplificar o desenvolvimento.
 
-Funcionalidades
+Funcionalidades:
 
-•
-Gerenciamento de Clientes:
+• Gerenciamento de Clientes:
 
-•
-Cadastrar novos clientes (com documento de identificação obrigatório).
+• Cadastrar novos clientes (com documento de identificação obrigatório).
 
-•
-Listar todos os clientes cadastrados.
+• Listar todos os clientes cadastrados.
 
-•
-Atualizar informações de clientes existentes.
+• Atualizar informações de clientes existentes.
 
+• Gerenciamento de Produtos:
 
+• Cadastrar novos produtos.
 
-•
-Gerenciamento de Produtos:
+• Listar todos os produtos cadastrados.
 
-•
-Cadastrar novos produtos.
+• Atualizar informações de produtos existentes.
 
-•
-Listar todos os produtos cadastrados.
+• Gerenciamento de Pedidos:
 
-•
-Atualizar informações de produtos existentes.
+• Criar novos pedidos associados a um cliente.
 
+• Adicionar, remover e alterar a quantidade de itens em um pedido (apenas se o pedido estiver com status "aberto").
 
+• Finalizar um pedido (requer ao menos um item e valor total maior que zero; altera o status para "aguardando_pagamento" e notifica o cliente por e-mail).
 
-•
-Gerenciamento de Pedidos:
+• Processar o pagamento de um pedido (apenas se o status for "aguardando_pagamento"; altera o status para "pago" e notifica o cliente por e-mail).
 
-•
-Criar novos pedidos associados a um cliente.
+• Entregar um pedido (apenas se o status de pagamento for "pago"; altera o status para "finalizado" e notifica o cliente por e-mail).
 
-•
-Adicionar, remover e alterar a quantidade de itens em um pedido (apenas se o pedido estiver com status "aberto").
+Como Executar:
 
-•
-Finalizar um pedido (requer ao menos um item e valor total maior que zero; altera o status para "aguardando_pagamento" e notifica o cliente por e-mail).
+1. Clone o repositório:
 
-•
-Processar o pagamento de um pedido (apenas se o status for "aguardando_pagamento"; altera o status para "pago" e notifica o cliente por e-mail).
+2. Compile e execute o sistema:
 
-•
-Entregar um pedido (apenas se o status de pagamento for "pago"; altera o status para "finalizado" e notifica o cliente por e-mail).
+3. Interaja com o menu:
 
-
-
-Estrutura do Projeto
-
-O projeto é um projeto Maven e possui a seguinte estrutura:
-
-•
-src/main/java/com/adatech/ecommerce/models/: Contém as classes de modelo (Cliente, Produto, ItemPedido, Pedido).
-
-•
-src/main/java/com/adatech/ecommerce/data_store/DataStore.java: Implementa a camada de persistência em memória para as entidades.
-
-•
-src/main/java/com/adatech/ecommerce/services/ECommerceService.java: Contém a lógica de negócio e as regras de validação para as operações do E-Commerce.
-
-•
-src/main/java/com/adatech/ecommerce/App.java: Interface de linha de comando para interagir com o sistema.
-
-•
-src/test/java/com/adatech/ecommerce/services/ECommerceServiceTest.java: Testes unitários para as funcionalidades do ECommerceService.
-
-•
-pom.xml: Arquivo de configuração do Maven.
-
-Como Executar
-
-1.
-Clone o repositório:
-
-2.
-Compile e execute o sistema:
-
-3.
-Interaja com o menu:
 Siga as opções apresentadas no terminal para gerenciar clientes, produtos e pedidos.
 
-Testes
+Testes:
 
 Para executar os testes unitários, utilize o seguinte comando:
 
 Bash
-
-
 mvn test
 
-
-Princípios de Design
+Princípios de Design:
 
 Este projeto busca aplicar os seguintes princípios:
 
-•
-SOLID:
+• SOLID.
 
-•
-Single Responsibility Principle (SRP): Cada classe e módulo tem uma única responsabilidade bem definida (ex: DataStore para persistência, ECommerceService para regras de negócio).
+• Single Responsibility Principle (SRP): Cada classe e módulo tem uma única responsabilidade bem definida (ex: DataStore para persistência, ECommerceService para regras de negócio).
 
-•
-Open/Closed Principle (OCP): O sistema é aberto para extensão (ex: novas formas de notificação poderiam ser adicionadas sem modificar ECommerceService) e fechado para modificação.
+• Open/Closed Principle (OCP): O sistema é aberto para extensão (ex: novas formas de notificação poderiam ser adicionadas sem modificar ECommerceService) e fechado para modificação.
 
-•
-Liskov Substitution Principle (LSP): (Aplicado implicitamente através do uso de herança e polimorfismo, se aplicável em futuras extensões).
+• Liskov Substitution Principle (LSP): (Aplicado implicitamente através do uso de herança e polimorfismo, se aplicável em futuras extensões).
 
-•
-Interface Segregation Principle (ISP): (Aplicado implicitamente, evitando interfaces "gordas" e focando em responsabilidades específicas).
+• Interface Segregation Principle (ISP): (Aplicado implicitamente, evitando interfaces "gordas" e focando em responsabilidades específicas).
 
-•
-Dependency Inversion Principle (DIP): As dependências são injetadas (ex: ECommerceService recebe DataStore no construtor), promovendo baixo acoplamento.
+• Dependency Inversion Principle (DIP): As dependências são injetadas (ex: ECommerceService recebe DataStore no construtor), promovendo baixo acoplamento.
 
+• Orientação a Objetos:
 
+• Encapsulamento: Atributos das classes são privados ou acessados via métodos.
 
-•
-Orientação a Objetos:
+• Herança: (Pode ser explorada em futuras extensões, como diferentes tipos de produtos ou clientes).
 
-•
-Encapsulamento: Atributos das classes são privados ou acessados via métodos.
+• Polimorfismo: (Pode ser explorada em futuras extensões).
 
-•
-Herança: (Pode ser explorada em futuras extensões, como diferentes tipos de produtos ou clientes).
+• Abstração: Modelos de dados representam entidades do mundo real de forma simplificada.
 
-•
-Polimorfismo: (Pode ser explorada em futuras extensões).
 
-•
-Abstração: Modelos de dados representam entidades do mundo real de forma simplificada.
 
 
 
-Bônus (Persistência em Arquivos)
 
-Atualmente, o sistema utiliza uma base de dados em memória. Para uma persistência em arquivos, seria necessário implementar uma nova classe DataStore que leria e escreveria os dados em arquivos (ex: JSON, CSV) em vez de dicionários em memória. Esta funcionalidade não é obrigatória para o escopo inicial do projeto.
 
-Autor
 
-Manus
-(Java)
-
-Este projeto implementa um sistema de E-Commerce básico para a Ada Tech, permitindo o gerenciamento de clientes, produtos e pedidos. O sistema foi desenvolvido em Java, seguindo os princípios de Orientação a Objetos e SOLID, com uma base de dados em memória para simplificar o desenvolvimento.
-
-Funcionalidades
-
-•
-Gerenciamento de Clientes:
-
-•
-Cadastrar novos clientes (com documento de identificação obrigatório).
-
-•
-Listar todos os clientes cadastrados.
-
-•
-Atualizar informações de clientes existentes.
-
-
-
-•
-Gerenciamento de Produtos:
-
-•
-Cadastrar novos produtos.
-
-•
-Listar todos os produtos cadastrados.
-
-•
-Atualizar informações de produtos existentes.
-
-
-
-•
-Gerenciamento de Pedidos:
-
-•
-Criar novos pedidos associados a um cliente.
-
-•
-Adicionar, remover e alterar a quantidade de itens em um pedido (apenas se o pedido estiver com status "aberto").
-
-•
-Finalizar um pedido (requer ao menos um item e valor total maior que zero; altera o status para "aguardando_pagamento" e notifica o cliente por e-mail).
-
-•
-Processar o pagamento de um pedido (apenas se o status for "aguardando_pagamento"; altera o status para "pago" e notifica o cliente por e-mail).
-
-•
-Entregar um pedido (apenas se o status de pagamento for "pago"; altera o status para "finalizado" e notifica o cliente por e-mail).
-
-
-
-Estrutura do Projeto
-
-O projeto é um projeto Maven e possui a seguinte estrutura:
-
-•
-src/main/java/com/adatech/ecommerce/models/: Contém as classes de modelo (Cliente, Produto, ItemPedido, Pedido).
-
-•
-src/main/java/com/adatech/ecommerce/data_store/DataStore.java: Implementa a camada de persistência em memória para as entidades.
-
-•
-src/main/java/com/adatech/ecommerce/services/ECommerceService.java: Contém a lógica de negócio e as regras de validação para as operações do E-Commerce.
-
-•
-src/main/java/com/adatech/ecommerce/App.java: Interface de linha de comando para interagir com o sistema.
-
-•
-src/test/java/com/adatech/ecommerce/services/ECommerceServiceTest.java: Testes unitários para as funcionalidades do ECommerceService.
-
-•
-pom.xml: Arquivo de configuração do Maven.
-
-Como Executar
-
-1.
-Clone o repositório:
-
-2.
-Compile e execute o sistema:
-
-3.
-Interaja com o menu:
-Siga as opções apresentadas no terminal para gerenciar clientes, produtos e pedidos.
-
-Testes
-
-Para executar os testes unitários, utilize o seguinte comando:
-
-Bash
-
-
-mvn test
-
-
-Princípios de Design
-
-Este projeto busca aplicar os seguintes princípios:
-
-•
-SOLID:
-
-•
-Single Responsibility Principle (SRP): Cada classe e módulo tem uma única responsabilidade bem definida (ex: DataStore para persistência, ECommerceService para regras de negócio).
-
-•
-Open/Closed Principle (OCP): O sistema é aberto para extensão (ex: novas formas de notificação poderiam ser adicionadas sem modificar ECommerceService) e fechado para modificação.
-
-•
-Liskov Substitution Principle (LSP): (Aplicado implicitamente através do uso de herança e polimorfismo, se aplicável em futuras extensões).
-
-•
-Interface Segregation Principle (ISP): (Aplicado implicitamente, evitando interfaces "gordas" e focando em responsabilidades específicas).
-
-•
-Dependency Inversion Principle (DIP): As dependências são injetadas (ex: ECommerceService recebe DataStore no construtor), promovendo baixo acoplamento.
-
-
-
-•
-Orientação a Objetos:
-
-•
-Encapsulamento: Atributos das classes são privados ou acessados via métodos.
-
-•
-Herança: (Pode ser explorada em futuras extensões, como diferentes tipos de produtos ou clientes).
-
-•
-Polimorfismo: (Pode ser explorado em futuras extensões).
 
 
 
