@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8; /* Cinza Claro */
+    color: #333333; /* Preto para texto */
+}
+
+header {
+    background-color: #FFFFFF; /* Branco */
+    padding: 20px;
+    border-bottom: 1px solid #EEEEEE;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #333333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF; /* Azul para links */
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: #555555; /* Cinza Escuro para títulos de seção */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container,
+.list-container {
+    background-color: #F8F8F8;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.form-container h3,
+.list-container h3 {
+    color: #333333;
+    margin-top: 0;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 22px); /* Adjust for padding and border */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+button {
+    background-color: #007BFF; /* Azul para botões */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #FFFFFF;
+    border-top: 1px solid #EEEEEE;
+    color: #555555;
+}
+
+
